@@ -30,6 +30,7 @@ export async function getDiscoverMovies(id?: string, keywords?: string) {
   id && url.searchParams.set("with_genres", id);
 
   const data = await fetchFromTMDB(url);
+  console.log(data.results)
   return data.results;
 }
 

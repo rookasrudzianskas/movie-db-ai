@@ -14,8 +14,8 @@ async function SearchPage({ params: { term } }: Props) {
 
   const termToUse = decodeURI(term);
 
-  const movies = await getSearchedMovies(termToUse);
-  const popularMovies = await getPopularMovies();
+  // const movies = await getSearchedMovies(termToUse);
+  // const popularMovies = await getPopularMovies();
 
   return (
     <div className="max-w-7xl mx-auto">
