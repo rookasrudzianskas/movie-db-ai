@@ -1,10 +1,8 @@
-// import AIAzureSuggestion from "@/components/AIAzureSuggestion";
-// import AISuggestion from "@/components/AISuggestion";
-// import MoviesCarousel from "@/components/MoviesCarousel";
 import { getDiscoverMovies } from "@/lib/getMovies";
 import React from "react";
 import MoviesCarousel from "@/components/movies-carousel";
-import AISuggestion from "@/components/ai-suggestion";
+// import AISuggestion from "@/components/ai-suggestion";
+// import AIAzureSuggestion from "@/components/ai-azure-suggestion";
 
 async function GenrePage({
   params: { id },
@@ -23,8 +21,8 @@ async function GenrePage({
       <div className="flex flex-col space-y-5 mt-32 xl:mt-42">
         <h1 className="text-6xl font-bold px-10">Results for {genre}</h1>
 
-        <AIAzureSuggestion term={genre} />
-        <AISuggestion term={genre} />
+        {/*<AIAzureSuggestion term={genre} />*/}
+        {/*<AISuggestion term={genre} />*/}
         <MoviesCarousel title={`Genre`} movies={movies} isVertical />
       </div>
     </div>
