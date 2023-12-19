@@ -18,7 +18,7 @@ function Header() {
       </Link>
 
       <div className="flex space-x-2">
-        {/*<GenreDropdown />*/}
+        <GenreDropdown />
         <SearchInput />
         <ThemeToggler />
       </div>
