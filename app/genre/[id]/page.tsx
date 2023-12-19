@@ -2,6 +2,8 @@
 // import AISuggestion from "@/components/AISuggestion";
 // import MoviesCarousel from "@/components/MoviesCarousel";
 import { getDiscoverMovies } from "@/lib/getMovies";
+import React from "react";
+import MoviesCarousel from "@/components/movies-carousel";
 
 async function GenrePage({
   params: { id },
@@ -22,7 +24,7 @@ async function GenrePage({
 
         {/*<AIAzureSuggestion term={genre} />*/}
         {/* <AISuggestion term={genre} /> */}
-        {/*<MoviesCarousel title={`Genre`} movies={movies} isVertical />*/}
+        <MoviesCarousel title={`Genre`} movies={movies} isVertical />
       </div>
     </div>
   );

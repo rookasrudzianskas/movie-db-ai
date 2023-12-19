@@ -2,6 +2,8 @@
 // import MoviesCarousel from "@/components/MoviesCarousel";
 import { getPopularMovies, getSearchedMovies } from "@/lib/getMovies";
 import { notFound } from "next/navigation";
+import React from "react";
+import MoviesCarousel from "@/components/movies-carousel";
 
 type Props = {
   params: {
@@ -14,8 +16,8 @@ async function SearchPage({ params: { term } }: Props) {
 
   const termToUse = decodeURI(term);
 
-  // const movies = await getSearchedMovies(termToUse);
-  // const popularMovies = await getPopularMovies();
+  const movies = await getSearchedMovies(termToUse);
+  const popularMovies = await getPopularMovies();
 
   return (
     <div className="max-w-7xl mx-auto">
@@ -23,9 +25,9 @@ async function SearchPage({ params: { term } }: Props) {
         <h1 className="text-6xl font-bold px-10">Results for {termToUse}</h1>
         {/*<AISuggestion term={termToUse} />*/}
 
-        {/*<MoviesCarousel title="Movies" movies={movies} isVertical />*/}
+        <MoviesCarousel title="Movies" movies={movies} isVertical />
 
-        {/*<MoviesCarousel title="You may also like" movies={popularMovies} />*/}
+        <MoviesCarousel title="You may also like" movies={popularMovies} />
       </div>
     </div>
   );
